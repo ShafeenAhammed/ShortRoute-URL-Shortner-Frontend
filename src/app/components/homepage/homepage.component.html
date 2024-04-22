@@ -1,0 +1,19 @@
+<div class="container">
+  <p class="title">chinnaLink - The URL Shortener</p>
+  <div class="url-shortener">
+    <div class="form-group">
+      <label for="originalUrl">Enter URL to shorten:</label>
+      <div class="input-group">
+          <input type="text" id="originalUrl" name="originalUrl" [(ngModel)]="originalUrl" required>
+          <button (click)="shortenUrl()">Shorten</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="shortenedUrl" class="shortened-url">
+      <p class="shortened-text">Shortened URL:</p>
+      <br>
+      <input type="text" #shortenedInput [value]="shortenedUrl" readonly>
+      <button (click)="copyToClipboard()"><mat-icon>file_copy</mat-icon></button>
+      <button (click)="openQrCode()"><mat-icon>qr_code</mat-icon></button>
+  </div>
+</div>

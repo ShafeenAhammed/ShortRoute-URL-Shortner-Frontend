@@ -1,0 +1,4 @@
+<div class="container">
+    <qrcode [qrdata]="shortenedUrl" [elementType]="'img'" [width]="200" [scale]="4" #qrCodeElement></qrcode>
+    <button (click)="downloadQRCode()">Download QR Code</button>
+</div>

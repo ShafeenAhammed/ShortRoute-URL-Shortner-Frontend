@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <div class="navbar-brand">ShortRoute</div>
+    <ng-container *ngIf="logged">
+        <div class="navbar-menu">
+            <button class="logout-btn" routerLink="/login">Logout</button>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="!logged">
+        <div class="navbar-menu">
+            <button class="logout-btn" routerLink="/login">Login</button>
+        </div>
+    </ng-container>
+</nav>
+  
